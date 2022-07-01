@@ -5,5 +5,7 @@ client.on('messageCreate' async (msg) => {
     const embed = new MessageEmbed()
       .setTitle("에블핑 감지")
       .setColor(0xff0000)
+    if (msg.content.includes('@everyone')) {
     msg.channel.send({ embeds: [embed]})
+    }
 })
